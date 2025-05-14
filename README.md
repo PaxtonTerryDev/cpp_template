@@ -77,34 +77,3 @@ target_link_libraries(demo PRIVATE cpp_template_lib)
 ```cmake
 target_link_libraries(unit_tests PRIVATE cpp_template_lib Catch2::Catch2WithMain)
 ```
-
-Now `cpp_template` acts as a reusable module you can import into larger quant projects.
-
----
-
-## 🧠 Tip
-
-If you're using your personal `quant-config` library, be sure to:
-
-```cmake
-FetchContent_Declare(
-  quant_config
-  GIT_REPOSITORY https://github.com/PaxtonTerryDev/quant-config
-  GIT_TAG v1.0.0
-)
-FetchContent_MakeAvailable(quant_config)
-
-target_link_libraries(cpp_template_lib PUBLIC quant_config)
-```
-
----
-
-## 📚 Part of the [Quantitative Developer Roadmap](quant_roadmap.md)
-
-This project supports long-term modular development of quant libraries like:
-
-- Numerical Methods
-- Matrix Algebra
-- Brownian Motion
-- Monte Carlo Pricing
-- Backtesting Engines
